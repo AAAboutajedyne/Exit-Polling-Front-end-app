@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme"
 
 const config: Config = {
   content: [
@@ -8,6 +9,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      listStyleType: {
+        ...defaultTheme.listStyleType,
+        square: 'square',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
